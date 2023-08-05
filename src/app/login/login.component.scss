@@ -1,0 +1,92 @@
+@import '../../styles/variaveis.scss';
+
+.container-login {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo-devaria {
+        margin-bottom: 10%;
+    }
+
+    .btn-submit {
+        width: 100%;
+        height: 50px;
+        background-color: $primaryColor;
+        color: $whiteColor;
+        border-radius: 12px;
+        font-size: 16px;
+        border: none;
+        margin-top: 30px;
+
+        &:disabled {
+            opacity: 0.8;
+        }
+    }
+
+    .text-error {
+        color: $errorColor;
+        font-size: 14px;
+        max-width: 250px;
+    }
+
+    .input-container {
+        display: flex;
+        margin-top: 30px;
+
+        img {
+            margin-right: 10px;
+        }
+
+        .app-input {
+            font-size: 16px;
+            color: $primaryColor;
+            border-width: 0;
+            border-bottom: 1px solid $grayColor;
+            outline: none;
+
+            &:focus {
+                border-bottom-color: $primaryColor;
+            }
+
+            &::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+                color: $grayColor;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpointDesktop) {
+        display: flex;
+        flex-direction: row;
+
+        .logo-devaria {
+            width: 30%;
+            margin: 0px;
+        }
+
+        form {
+            border: 1px solid $primaryColor;
+            padding: 80px 40px;
+            border-radius: 32px;
+            margin-left: 15%;
+
+            .text-error {
+                max-width: 370px;
+            }
+
+            .input-container {
+                .app-input {
+                    width: 350px;
+                }
+            }
+
+            .btn-submit {
+                margin-top: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.app-input {
+  font-family: $fontRegular;
+  color: $primaryColor;
+  outline: none;
+
+  &[type="date"] {
+      position: relative;
+  }
+
+  &[type="date"]::-webkit-calendar-picker-indicator {
+      width: auto;
+      height: auto;
+      position: absolute;
+      cursor: pointer;
+      color: transparent;
+      background: transparent;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+  }
+}
+
+.app-modal-content {
+  .app-input {
+      border: 0.5px solid $grayColor;
+      color: $grayColor;
+      margin-bottom: 8px;
+      border-radius: 12px;
+      padding: 15px 24px;
+      width: 100%;
+      font-size: 14px;
+
+      &:focus {
+          border-color: $primaryColor;
+          color: $primaryColor;
+      }
+  }
+}
