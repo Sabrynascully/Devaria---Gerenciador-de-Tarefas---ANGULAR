@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../auth/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./painel.component.scss']
 })
 export class PainelComponent {
+
+
+
+
 
 }

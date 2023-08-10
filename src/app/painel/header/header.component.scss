@@ -1,0 +1,90 @@
+@import '../../../styles/variaveis.scss';
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $lightGreyColor;
+    padding: 24px 0px;
+    align-items: center;
+
+    .btn-add {
+        display: none;
+    }
+
+    .logo {
+        width: 35%;
+        margin-left: 16px;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+
+        .user-name {
+            font-size: 14px;
+            color: $primaryColor;
+            margin-right: 10px;
+        }
+
+        .btn-logout {
+            width: 28px;
+            height: 28px;
+            margin-right: 16px;
+            background-image: url('/assets/icones/exit-mobile.svg');
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: none;
+            margin-top: 2px;
+        }
+    }
+
+    @media screen and (min-width: $breakpointDesktop) {
+        .logo {
+            width: 12%;
+            margin-left: 60px;
+        }
+
+        .btn-add {
+            display: block;
+            border: none;
+            background-color: $secondaryColor;
+            border-radius: 10px;
+            color: $whiteColor;
+            height: 30px;
+            padding: 2px 8px 2px 25px;
+            position: relative;
+
+            span {
+                display: block;
+            }
+
+            .plus {
+                position: absolute;
+                font-size: 23px;
+                left: 8px;
+                top: -3px;
+            }
+        }
+
+        .user-info {
+            margin-right: 60px;
+
+            .user-name {
+                font-size: 16px;
+                color: $secondaryColor;
+            }
+
+            .btn-logout {
+                background-color: $secondaryColor;
+                border-radius: 10px;
+                margin-left: 10px;
+                width: 34px;
+                height: 34px;
+                background-image: url('/assets/icones/exit-desktop.svg');
+                background-size: 85%;
+                background-position: center;
+                margin-right: 0;
+            }
+        }
+    }
+}

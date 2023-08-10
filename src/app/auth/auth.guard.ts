@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
 @Injectable({
-  providedIn: 'root', // ou 'NgModule' se for fornecido em um módulo específico
+  providedIn: 'root', //
 })
 
 export class AuthGuard implements CanActivate {
