@@ -1,0 +1,49 @@
+@import '../../../styles/variaveis.scss';
+
+.container-footer {
+    margin: auto;
+    padding-bottom: 10px;
+
+    span {
+        display: none;
+    }
+
+    .btn-add {
+        display: flex;
+        background-color: $lightGreyColor;
+        border-radius: 12px;
+        width: 97%;
+        height: 40px;
+        margin: auto;
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        align-items: center;
+        color: $primaryColor;
+
+
+        img {
+            margin-right: 15px;
+        }
+
+        &:focus {
+            border: 1px solid $primaryColor
+        }
+    }
+
+    @media screen and (min-width: $breakpointDesktop) {
+        border-top: 1px solid $lightGreyColor;
+        height: 50px;
+        padding-top: 15px;
+        text-align: center;
+
+        .btn-add {
+            display: none;
+        }
+
+        span {
+            display: block;
+            color: $primaryColor;
+        }
+    }
+}

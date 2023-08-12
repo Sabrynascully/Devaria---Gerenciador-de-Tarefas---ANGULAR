@@ -19,10 +19,12 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     LoginComponent,
     PainelComponent,
     HeaderComponent,
+    FiltrosComponent,
+    ModalComponent,
     FooterComponent,
     ListaComponent,
-    FiltrosComponent,
-    ModalComponent
+
+
 
 
 
