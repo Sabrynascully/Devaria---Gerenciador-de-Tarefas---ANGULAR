@@ -1,0 +1,56 @@
+@import '../../../styles/variaveis.scss';
+
+.filter-container {
+    background-color: $lightGreyColor;
+    border-radius: 12px;
+    color: $primaryColor;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    align-items: center;
+    margin: 16px 8px;
+
+    .filter-desktop {
+        display: none;
+    }
+
+    h3 {
+        font-family: $fontBold;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $breakpointDesktop) {
+        margin: 16px 60px;
+
+        .icone-filtro {
+            display: none;
+        }
+
+        .filter-desktop {
+            display: block;
+
+            .icone-limpar {
+                cursor: pointer;
+                width: 25px;
+                margin-left: 15px;
+            }
+
+            label {
+                margin: 0px 8px;
+                font-size: 14px;
+            }
+
+            .divisor {
+                border-left: 1px solid $primaryColor;
+                margin-left: 16px;
+            }
+
+            .app-input {
+                border-radius: 6px;
+                border: 0.5px solid $primaryColor;
+                padding: 1px 8px;
+            }
+        }
+    }
+}

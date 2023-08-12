@@ -20,6 +20,8 @@ const resultado: LoginResponse = await this.makeHttpRequest({
   body: payload
 });
 
+
+
 return resultado;
   }
 
@@ -45,5 +47,7 @@ return resultado;
 
     return new UsuarioLogado(nome!, email!, token!);
   }
+
+
 
 }

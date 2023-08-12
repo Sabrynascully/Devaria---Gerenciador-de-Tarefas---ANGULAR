@@ -1,1 +1,95 @@
-<p>filtros works!</p>
+<div class="filter-container">
+  <h3>Tarefas</h3>
+
+  <img
+      class="icone-filtro"
+      src="/assets/icones/filtro.svg"
+      alt="Icone filtro"
+      (click)="toggleModal()"
+  />
+
+  <div class="filter-desktop">
+      <label>Data prevista de conclusão:</label>
+
+      <input
+          type="date"
+          class="app-input"
+          [(ngModel)]="filtro.periodoDe"
+          (change)="filtrarTarefas()"
+      />
+
+      <label>até</label>
+
+      <input
+          type="date"
+          class="app-input"
+          [(ngModel)]="filtro.periodoAte"
+          (change)="filtrarTarefas()"
+      />
+
+      <span class="divisor"></span>
+      <label>Status</label>
+
+      <select
+          class="app-input"
+          placeholder='Status'
+          [(ngModel)]="filtro.status.id"
+          (change)="filtrarTarefas()"
+      >
+          <option *ngFor="let status of listaDeStatus;" [value]="status.id">
+              {{status.nome}}
+          </option>
+      </select>
+
+      <img
+          class="icone-limpar"
+          src="/assets/icones/x-circle.svg"
+          alt="Limpar filtro"
+          (click)="limparFiltro()"
+      />
+  </div>
+</div>
+
+<app-modal [exibir]='modalAberto'>
+  <h4 class="modal-title">
+      Filtrar tarefas
+  </h4>
+
+  <div class="form-filters">
+      <input
+          class="app-input inicio"
+          type="text"
+          placeholder="Data prevista de conclusão (inicial)"
+          [(ngModel)]="filtro.periodoDe"
+          inputDateComPlaceholder
+      />
+
+      <input
+          class="app-input final"
+          type="text"
+          placeholder="Data prevista de conclusão (final)"
+          [(ngModel)]="filtro.periodoAte"
+          inputDateComPlaceholder
+      />
+
+      <select
+          class="app-input"
+          placeholder='Status'
+          [(ngModel)]="filtro.status.id"
+      >
+          <option *ngFor="let status of listaDeStatus;" [value]="status.id">
+              {{status.nome}}
+          </option>
+      </select>
+  </div>
+
+  <div class="actions">
+      <button
+          class="btn btn-principal btn-apply-filter"
+          (click)='filtrarTarefas()'
+      >
+          Aplicar filtros
+      </button>
+      <span class="btn-secundario" (click)="toggleModal()">Cancelar</span>
+  </div>
+</app-modal>

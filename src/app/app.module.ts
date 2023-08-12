@@ -10,6 +10,7 @@ import { HeaderComponent } from './painel/header/header.component';
 import { FooterComponent } from './painel/footer/footer.component';
 import { ListaComponent } from './painel/lista/lista.component';
 import { FiltrosComponent } from './painel/filtros/filtros.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
 
 
 @NgModule({
@@ -21,6 +22,9 @@ import { FiltrosComponent } from './painel/filtros/filtros.component';
     FooterComponent,
     ListaComponent,
     FiltrosComponent,
+    ModalComponent
+
+
 
   ],
   imports: [

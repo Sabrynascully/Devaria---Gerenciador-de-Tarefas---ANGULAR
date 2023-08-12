@@ -39,7 +39,16 @@ export class LoginComponent implements OnInit {
     this.carregando = true;
 
     try {
-      await this.authService.login(this.form.value);
+        const valor =  await this.authService.login(this.form.value);
+        if(valor) {
+          localStorage.setItem('accessToken',valor.token)
+          localStorage.setItem('usuarioNome',valor.nome)
+          localStorage.setItem('usuarioEmail',valor.email)
+
+         }
+
+      console.log(valor,'chamou aqui');
+
       this.router.navigateByUrl('/');
     } catch (e:any) {
       this.msgErro = e.error && e.error.message
